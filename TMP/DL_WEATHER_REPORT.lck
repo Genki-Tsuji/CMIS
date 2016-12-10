@@ -1,3 +1,0 @@
-URL = "http://www.data.jma.go.jp/gmd/risk/obsdl/show/table"
-REMOTE-NAME = "DL_WEATHER_REPORT.csv"
-DATA = "stationNumList=%5B%22s47662%22%5D&aggrgPeriod=1&elementNumList=%5B%5B%22201%22%2C%22%22%5D%2C%5B%22101%22%2C%22%22%5D%2C%5B%22401%22%2C%22%22%5D%2C%5B%22301%22%2C%22%22%5D%2C%5B%22604%22%2C%22%22%5D%2C%5B%22601%22%2C%22%22%5D%2C%5B%22607%22%2C%22%22%5D%5D&interAnnualFlag=1&ymdList=%5B%22FROM_YYYY%22%2C%222015%22%2C%22FROM_M%22%2C%2211%22%2C%22FROM_D%22%2C%2217%22%5D&optionNumList=%5B%5D&downloadFlag=true&rmkFlag=1&disconnectFlag=1&youbiFlag=0&kijiFlag=0&huukouFlag=0&csvFlag=1&jikantaiFlag=0&jikantaiList=%5B%5D&ymdLiteral=1&PHPSESSID="
