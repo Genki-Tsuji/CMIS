@@ -1,0 +1,1 @@
+grep 'day=23&view=p1' daily_s1.php\?prec_no\=44\&block_no\=47662\&year\=2015\&month\=5\&day\=23 | awk -F'td' '{print 0}' | awk -F'=' '{print }' | awk -F'>' '{print }' | awk -F'<' '{print }'
