@@ -23,11 +23,8 @@ UPDATE_dow=${TEMP_AREA}/dow_jones_industrial_newest.csv
 MASTER_wti=${DATA_AREA}/wti_rate.csv
 UPDATE_wti=${TEMP_AREA}/DCOILWTICO.csv
 
-MASTER_icm=${DATA_AREA}/i_commodity.csv
-UPDATE_icm=${TEMP_AREA}/i-mizuho-commodity-index
-
 # Set Var to reference for to UpdateFile
-UPDATE_FILE_LIST="225 225_vi exchrr dow wti icm"
+UPDATE_FILE_LIST="225 225_vi exchrr dow wti"
 
 # Data Cleaning 
 sed -e '$d' ${UPDATE_225} > ${TEMP_AREA}/UPDATE_225_TMP.dat
@@ -37,11 +34,6 @@ sed -e '$d' ${UPDATE_225_vi} > ${TEMP_AREA}/UPDATE_225_vi_TMP.dat
 mv ${TEMP_AREA}/UPDATE_225_vi_TMP.dat ${UPDATE_225_vi}
 
 cat ${TEMP_AREA}/"download?MOD_VIEW"* | awk -F'[/,]' -v OFS=, 'NR > 1 {print 20$3"/"$1"/"$2,$4,$5,$6,$7}' | sort -k1 > ${UPDATE_dow}
-
-NAV_VALUE=`grep -i -A 1 'nav-value' ${TEMP_AREA}/i-mizuho-commodity-index | awk 'NR==2 {print substr($0, 3, length($0) - 1);}' | tr -d '\r' | tr -d ','`
-AS_OF_DATE=`grep -i -A 1 'as-of-date' ${TEMP_AREA}/i-mizuho-commodity-index | awk 'NR==2 {print $2}'  | tr -d '\r'`
-
-echo "$AS_OF_DATE,$NAV_VALUE" > ${UPDATE_icm}
 
 for ARG in $UPDATE_FILE_LIST 
 do
