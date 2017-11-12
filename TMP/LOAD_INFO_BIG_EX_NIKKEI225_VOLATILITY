@@ -1,0 +1,7 @@
+externalFileNm:"/home/ec2-user/CMIS/DATA/nikkei_225_volindex.csv"
+fields terminated by:","
+enclosed by "\"":Yes
+lines terminated by:"\r\n"
+ignore 1 lines:No
+tableNm:BIG_EX_NIKKEI225_VOLATILITY
+assignColPart:(DATEYMD,VOLATILITY_NIKKEI225)

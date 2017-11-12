@@ -1,0 +1,7 @@
+externalFileNm:"/home/ec2-user/CMIS/DATA/exchange_rate.csv"
+fields terminated by:","
+enclosed by "\"":Yes
+lines terminated by:"\r\n"
+ignore 1 lines:Yes
+tableNm:BIG_EX_EXCHANGE_RATE
+assignColPart:(DATEYMD,TTM_USD,TTM_GBP,TTM_EUR)

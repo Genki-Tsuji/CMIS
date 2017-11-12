@@ -3,6 +3,7 @@
 # Set Environment
 DATA_AREA=${HOME}/CMIS/DATA
 TEMP_AREA=${HOME}/CMIS/TMP
+LOG_AREA=${HOME}/CMIS/LOG
 WIN_AREA=/win
 EXE_DATE=`date "+%Y%m%d"`
 EXE_SH=`basename ${0} .sh`
@@ -53,15 +54,15 @@ do
   # Check UpdateFile LastDate
   LAST_DATE_U=`cat ${UPDATE} | awk -F',' -v LASTROW=${REC_CNT_U} '{ if(NR==LASTROW) print $1}' | tr -d '\"'`
 
-echo ${ARG} >> ${TEMP_AREA}/${EXE_SH}${EXE_DATE}.log
-echo "**********debug**********" >> ${TEMP_AREA}/${EXE_SH}${EXE_DATE}.log
-  echo ${LAST_DATE_M} >> ${TEMP_AREA}/${EXE_SH}${EXE_DATE}.log
-  echo ${LAST_DATE_U} >> ${TEMP_AREA}/${EXE_SH}${EXE_DATE}.log
-  echo "" >> ${TEMP_AREA}/${EXE_SH}${EXE_DATE}.log
-  tail -n 5 ${UPDATE} >> ${TEMP_AREA}/${EXE_SH}${EXE_DATE}.log
-  echo "" >> ${TEMP_AREA}/${EXE_SH}${EXE_DATE}.log
-echo "**********debug**********" >> ${TEMP_AREA}/${EXE_SH}${EXE_DATE}.log
-echo "" >> ${TEMP_AREA}/${EXE_SH}${EXE_DATE}.log
+echo ${ARG} >> ${LOG_AREA}/${EXE_SH}${EXE_DATE}.log
+echo "**********debug**********" >> ${LOG_AREA}/${EXE_SH}${EXE_DATE}.log
+  echo ${LAST_DATE_M} >> ${LOG_AREA}/${EXE_SH}${EXE_DATE}.log
+  echo ${LAST_DATE_U} >> ${LOG_AREA}/${EXE_SH}${EXE_DATE}.log
+  echo "" >> ${LOG_AREA}/${EXE_SH}${EXE_DATE}.log
+  tail -n 5 ${UPDATE} >> ${LOG_AREA}/${EXE_SH}${EXE_DATE}.log
+  echo "" >> ${LOG_AREA}/${EXE_SH}${EXE_DATE}.log
+echo "**********debug**********" >> ${LOG_AREA}/${EXE_SH}${EXE_DATE}.log
+echo "" >> ${LOG_AREA}/${EXE_SH}${EXE_DATE}.log
 
   # Judge Update MasterFile or not
   if [ $LAST_DATE_M != $LAST_DATE_U ]

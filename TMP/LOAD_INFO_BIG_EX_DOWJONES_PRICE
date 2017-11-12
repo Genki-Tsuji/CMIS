@@ -1,0 +1,7 @@
+externalFileNm:"/home/ec2-user/CMIS/DATA/dow_jones_industrial.csv"
+fields terminated by:","
+enclosed by "\"":No
+lines terminated by:"\n"
+ignore 1 lines:No
+tableNm:BIG_EX_DOWJONES_PRICE
+assignColPart:(DATEYMD,PRICE_DOWJONES)
