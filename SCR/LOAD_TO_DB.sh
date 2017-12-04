@@ -6,12 +6,13 @@ configFile=${HOME}/.mysql_conf
 userNm=`grep userNm ${configFile} | awk -F':' '{print $2}'`
 passWd=`grep passWd ${configFile} | awk -F':' '{print $2}'`
 hostNm=`grep hostNm ${configFile} | awk -F':' '{print $2}'`
+portNo=`grep portNo ${configFile} | awk -F':' '{print $2}'`
 
 # Generate Load Module
 ### 1.connect ### 
 useDbPart='--database='
 dbNm='CMIS '
-accessModulue="mysql -h ${hostNm} -P 3306 -u ${userNm} --password=${passWd} ${useDbPart}${dbNm} "
+accessModulue="mysql -h ${hostNm} -P ${portNo} -u ${userNm} --password=${passWd} ${useDbPart}${dbNm} "
 
 # ======debug echo ${accessModulue} debug======
 

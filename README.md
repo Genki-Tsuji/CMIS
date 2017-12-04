@@ -15,9 +15,9 @@ not to miss a skyrocket
 
 4. Analysing
 
-	choose a valid independent variable only above a certain rate(correspondent) for dependent variable
-	culclate regression model
-	get a independent variable with applying regression model
+	choose a valid independent variable only above a certain level(correlation) for dependent variable
+	calculate multiple regression linear model
+	get a expected independent variable by applying multiple regression linear model
 
 5. Reporting
 
